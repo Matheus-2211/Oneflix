@@ -23,42 +23,42 @@ export default {
             {
                 slug: 'originals',
                 title: 'Originais do Netflix',
-                items: []
+                items:  await basicFetch(`/discover/tv?with_network=213&languege=pt-BR&api_key=${API_KEY}`) // filtrar para filmes so da netfilx;
             },
             {
                 slug: 'trending',
                 title: 'Recomendados para você',
-                items: []
+                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'toprated',
                 title: 'Em Alta',
-                items: []
+                items: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'action',
                 title: 'Ação',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=28&laguage=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'comedy',
                 title: 'Comédia',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=35&laguage=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'horror',
                 title: 'Terror',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=27&laguage=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'romance',
                 title: 'Romanee',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=10749&laguage=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'documentary',
                 title: 'Documentarios',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=99&laguage=pt-BR&api_key=${API_KEY}`)
             },
         ];
     }
